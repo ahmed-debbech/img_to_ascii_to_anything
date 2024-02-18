@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cstdlib> 
 #include <random> 
+#include "private.h"
 
 using namespace std;
 using namespace sf; 
@@ -65,12 +66,15 @@ int main(){
     cout << endl;
     
     sf::Image image;
-    if (!image.loadFromFile("../res/r.jpeg")){
+    if (!image.loadFromFile("../res/passa.jpg")){
         cout << "could not load image" << endl;
         return 0;
     }else{
         cout << "loaded image" << endl;
     }
+
+    PrvFields prv;
+    prv.print();
 
     sf::Vector2u vect = image.getSize();
     
